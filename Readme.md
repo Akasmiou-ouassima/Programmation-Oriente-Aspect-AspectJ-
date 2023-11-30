@@ -47,7 +47,7 @@
 ![Alt text](image-3.png)
 
 
-**Architecture**
+## **Architecture**
 
 ![Alt text](image-4.png)
 
