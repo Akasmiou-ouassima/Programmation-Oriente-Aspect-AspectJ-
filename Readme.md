@@ -341,3 +341,7 @@ public class Application {
     }
 }
 ```
+
+**Exécution**
+
+![Alt text](image-7.png)
