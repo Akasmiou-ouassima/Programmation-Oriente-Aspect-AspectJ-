@@ -44,8 +44,10 @@
 # Partie I En utilsant AspectJ
 ![Alt text](image-3.png)
 
+
 **Architecture**
 ![Alt text](image-4.png)
+
 
 ## **Entité _Compte_**
 > Une classe Java Compte représentant un compte bancaire. 
