@@ -1,4 +1,4 @@
-#  🔗  Activité Pratique AOP
+#  🔗  Activité Pratique AOP (AspectJ)
 
 <ul>
 <li> Étapes et prérequis généraux (Configuration d'AspectJ dans IntelliJ IDEA)</li>
@@ -45,10 +45,9 @@
 ![Alt text](image-3.png)
 
 **Architecture**
-
 ![Alt text](image-4.png)
 
-**Entité _Compte_**
+## **Entité _Compte_**
 > Une classe Java Compte représentant un compte bancaire. 
 
 ```java
@@ -84,7 +83,7 @@ public class Compte {
 }
 ```
 
-**Interface _IMetierBanque_**
+## **Interface _IMetierBanque_**
 
 > Cette interface Java IMetierBanque déclare des méthodes pour gérer les comptes bancaires, telles que l'ajout d'un compte, le dépôt d'argent, le retrait d'argent et la vérification du solde d'un compte.
 
@@ -97,7 +96,7 @@ public interface IMetierBanque {
 }
 ```
 
-**Implémentation _MetierBanqueImpl_**
+## **Implémentation _MetierBanqueImpl_**
 
 > La classe MetierBanqueImpl implémente l'interface IMetierBanque. Elle utilise une Map pour stocker les comptes et fournit des implémentations pour l'ajout d'un compte, le dépôt d'argent, le retrait d'argent et la vérification du solde d'un compte.
 
@@ -128,7 +127,7 @@ public class MetierBanqueImpl implements IMetierBanque {
     }
 }
 ```
-**Aspect _FirstAspect_**
+## **Aspect _FirstAspect_**
 
 > Cet aspect AspectJ, FirstAspect, intercepte l'exécution de la méthode main de la classe org.example.test.Application. Il comprend des conseils before, after et around. 
 
@@ -161,7 +160,7 @@ public aspect FirstAspect {
 }
 ```
 
-**Aspect _SecondAspect_**
+## **Aspect _SecondAspect_**
 
 > Cet aspect AspectJ, SecondAspect est une implémentation alternative pour intercepter la méthode main en utilisant des annotations. 
 
@@ -198,7 +197,7 @@ public class SecondAspect {
     }
 }
 ```
-**Aspect _LoggingAspect_**
+## **Aspect _LoggingAspect_**
 
 > Cet aspect AspectJ, LoggingAspect, enregistre l'exécution des méthodes de la classe MetierBanqueImpl. Il enregistre l'heure avant et après l'exécution de la méthode et calcule la durée. Les journaux sont écrits dans un fichier nommé "log.txt".
 
@@ -243,10 +242,11 @@ public class LoggingAspect {
     }
 }
 ```
-**Fichier log.txt**
+
+## **Fichier log.txt**
 ![Alt text](image-5.png)
 
-**Aspect _PatchRetraitAspect_**
+## **Aspect _PatchRetraitAspect_**
 
 > Cet aspect AspectJ, PatchRetraitAspect, intercepte la méthode retirer de la classe MetierBanqueImpl. Il vérifie si le solde du compte est suffisant avant d'autoriser un retrait et lève une RuntimeException si le solde est insuffisant.
 
@@ -274,7 +274,7 @@ public class PatchRetraitAspect {
     }
 }
 ```
-**Aspect _SecurityAspect_**
+## **Aspect _SecurityAspect_**
 
 > Cet aspect AspectJ, SecurityAspect, intercepte la méthode start de la classe Application. Il demande à l'utilisateur un nom d'utilisateur et un mot de passe, permettant l'accès à l'application uniquement si les informations d'identification fournies correspondent aux valeurs attendues.
 
@@ -300,7 +300,7 @@ public class SecurityAspect {
     }
 }
 ```
-**Application _main_**
+## **Application _main_**
 
 > La classe Application contient la méthode main, qui sert de point d'entrée de l'application. Elle permet aux utilisateurs de créer interactivement un compte bancaire, d'effectuer des opérations de dépôt et de retrait, et de consulter l'état du compte. L'application continue jusqu'à ce que l'utilisateur décide de quitter. Il existe également une vérification de sécurité simple mise en œuvre dans la méthode start en utilisant l'aspect SecurityAspect.
 
@@ -342,6 +342,6 @@ public class Application {
 }
 ```
 
-**Exécution**
+## **Exécution**
 
 ![Alt text](image-7.png)
