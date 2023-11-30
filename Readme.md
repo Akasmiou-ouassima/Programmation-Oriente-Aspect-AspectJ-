@@ -41,11 +41,14 @@
 >  AspectJ utilise un compilateur spécifique. La configuration du compilateur AspectJ dans les paramètres du projet permet à IntelliJ IDEA de reconnaître et de traiter correctement les aspects lors de la compilation du code source. 
 ![Alt text](image-2.png)
 
+
 # Partie I En utilsant AspectJ
+
 ![Alt text](image-3.png)
 
 
 **Architecture**
+
 ![Alt text](image-4.png)
 
 
